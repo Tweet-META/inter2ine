@@ -2,15 +2,96 @@ html {
   scroll-behavior: smooth;
 }
 
+.home-head {
+  position: relative;
+  padding: 0;
+  border-top: 0.4rem solid var(--yellow);
+  background: var(--white);
+  color: var(--ink);
+}
+
+.home-top {
+  min-height: 2.75rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-inline: max(1.5rem, calc((100% - 90rem) / 2));
+  background: var(--gray);
+  color: var(--white);
+}
+
+.home-top a {
+  text-decoration: none;
+}
+
+.home-top a:hover {
+  color: var(--yellow);
+}
+
+.home-brand {
+  width: fit-content;
+  margin: 1rem auto 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--ink);
+  font-size: clamp(2rem, 3.2vw, 3.1rem);
+  font-weight: 600;
+  line-height: 1.15;
+  text-align: center;
+  text-decoration: none;
+}
+
+.home-brand img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+}
+
+.home-brand small {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--gray);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.home-nav {
+  min-height: 3.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-top: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.home-nav .links {
+  margin-left: 0;
+  gap: 0;
+}
+
+.home-nav .links a {
+  padding: 0.85rem 1.5rem;
+  border: 0;
+}
+
+.home-nav .links a:hover,
+.home-nav .links .is-on {
+  background: var(--gray);
+  color: var(--yellow);
+}
+
 .wrap {
   width: min(100% - 3rem, 76rem);
   margin-inline: auto;
 }
 
 .hero {
-  position: sticky;
-  top: 4.5rem;
-  height: 62svh;
+  position: relative;
+  height: 45svh;
   overflow: hidden;
   background: var(--ink);
 }
@@ -19,20 +100,20 @@ html {
   padding-block: clamp(0.875rem, 2vw, 1.5rem) clamp(1.5rem, 3vw, 3rem);
   background: var(--soft);
   margin-bottom: 4rem;
+  text-align: center;
 }
 
 .intro-in {
-  display: flex;
+  display: column;
   align-items: center;
   justify-content: center;
   gap: clamp(1.5rem, 5vw, 4rem);
 }
 
 .intro h1 {
-  margin: 0;
-  font-size: clamp(3rem, 7.5vw, 7rem);
+  font-size: 2rem;
   line-height: 1;
-  letter-spacing: -0.06em;
+  color:#00447b;
 }
 
 .eyebrow {
@@ -42,10 +123,6 @@ html {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-}
-
-.intro .eyebrow {
-  font-size: clamp(0.58rem, 0.75vw, 0.78rem);
 }
 
 .section {
@@ -205,6 +282,32 @@ html {
 }
 
 @media (max-width: 900px) {
+  .home-brand {
+    margin-top: 1rem;
+  }
+
+  .home-brand img {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .home-nav {
+    min-height: 3.25rem;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0.75rem;
+    padding-inline: 1rem;
+  }
+
+  .home-nav .menu {
+    margin-left: 0;
+  }
+
+  .home-nav .menu-list {
+    top: 2rem;
+    color: var(--white);
+  }
+
   .tiles {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -229,8 +332,7 @@ html {
   }
 
   .hero {
-    top: 4.5rem;
-    height: 48svh;
+    height: 45svh;
   }
 
   .intro {
@@ -244,14 +346,8 @@ html {
     text-align: center;
   }
 
-  .intro .eyebrow {
-    width: 100%;
-    font-size: clamp(0.52rem, 1.3vw, 0.68rem);
-    letter-spacing: 0.08em;
-  }
-
   .intro h1 {
-    font-size: clamp(2.4rem, 10vw, 3.8rem);
+    font-size: 2rem;
   }
 
   .portals,
