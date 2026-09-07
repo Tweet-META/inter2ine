@@ -96,26 +96,6 @@ html {
   background: var(--ink);
 }
 
-.intro {
-  padding-block: clamp(0.875rem, 2vw, 1.5rem) clamp(1.5rem, 3vw, 3rem);
-  background: var(--soft);
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.intro-in {
-  display: column;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(1.5rem, 5vw, 4rem);
-}
-
-.intro h1 {
-  font-size: 2rem;
-  line-height: 1;
-  color:#00447b;
-}
-
 .eyebrow {
   margin: 0 0 0.75rem;
   color: var(--yellow);
@@ -333,21 +313,6 @@ html {
 
   .hero {
     height: 45svh;
-  }
-
-  .intro {
-    padding-top: clamp(0.75rem, 2vw, 1.25rem);
-    padding-bottom: clamp(1.25rem, 3vw, 2rem);
-  }
-
-  .intro-in {
-    flex-direction: column;
-    gap: clamp(1rem, 3vw, 1.5rem);
-    text-align: center;
-  }
-
-  .intro h1 {
-    font-size: 2rem;
   }
 
   .portals,
