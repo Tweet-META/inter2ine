@@ -42,9 +42,9 @@
 .tip {
   margin-block: 1.5rem;
   padding: 0.4rem 1.25rem;
-  border-left: 0.25rem solid var(--yellow);
+  border-left: 0.25rem solid var(--red);
   border-radius: 0 0.35rem 0.35rem 0;
-  background: color-mix(in srgb, var(--yellow) 12%, var(--white));
+  background: color-mix(in srgb, var(--red) 10%, var(--white));
 }
 
 .doc-links {
