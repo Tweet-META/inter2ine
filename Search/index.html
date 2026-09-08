@@ -4,8 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>工具｜学生校园信息站</title>
+  <meta name="description" content="搜索 Inter2ine 的站内内容">
+  <title>搜索｜Inter2ine</title>
   <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/search.css">
+  <script src="../assets/js/search.js" defer></script>
 </head>
 
 <body>
@@ -34,32 +37,29 @@
         </nav>
       </details>
 
-      <a class="site-search" href="../Search/index.html" aria-label="搜索">
+      <a class="site-search is-on" href="index.html" aria-label="搜索">
         <i aria-hidden="true"></i>
       </a>
     </div>
   </header>
 
-  <main class="container">
-    <h1>工具</h1>
-    <p>学习、检索与信息整理工具入口。</p>
+  <main class="search-page">
+    <div class="search-head">
+      <p class="search-label">SEARCH</p>
+      <h1>站内搜索</h1>
+      <p>输入一个或多个关键词，搜索本站已经收录的页面内容。</p>
+    </div>
 
-    <section class="grid">
-      <article class="card">
-        <h2>词典</h2>
-        <p>同义词与语言查询工具占位。</p>
-      </article>
+    <form class="search-form" action="index.html" method="get" role="search">
+      <label for="search-input">搜索关键词</label>
+      <div class="search-row">
+        <input id="search-input" name="q" type="search" autocomplete="off" placeholder="例如：课程、SAT、社团">
+        <button type="submit">搜索</button>
+      </div>
+    </form>
 
-      <article class="card">
-        <h2>电子书</h2>
-        <p>电子资料获取工具占位。</p>
-      </article>
-
-      <article class="card">
-        <h2>AI 使用</h2>
-        <p>辅助学习的工具说明占位。</p>
-      </article>
-    </section>
+    <p class="search-status" aria-live="polite">正在读取搜索索引……</p>
+    <section class="search-results" aria-label="搜索结果"></section>
   </main>
 
   <footer class="site-foot">

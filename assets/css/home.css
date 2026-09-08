@@ -2,98 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.home-head {
-  position: sticky;
-  top: 0;
-  z-index: 30;
-  padding: 0;
-  border-top: 0.5rem solid var(--red);
-  background: var(--white);
-  color: var(--ink);
-}
-
-.home-bar {
-  width: min(100% - 3rem, 76rem);
-  min-height: 6rem;
-  margin-inline: auto;
-  display: flex;
-  align-items: stretch;
-}
-
-.home-brand {
-  width: fit-content;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  margin-right: auto;
-}
-
-.home-brand img {
-  width: 15rem;
-  height: 7rem;
-  object-fit: contain;
-}
-
-.home-bar .links {
-  margin: 0;
-  gap: 0;
-  font-size: 1.1rem;
-}
-
-.home-bar .links a {
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 1.5rem 0.5rem;
-  border: 0;
-  border-bottom: 0.25rem solid transparent;
-  margin-top: 0.75rem;
-}
-
-.home-bar .links a:hover,
-.home-bar .links .is-on {
-  border-color: var(--red);
-  background: var(--white);
-  color: var(--red);
-}
-
-.home-search {
-  min-height: 3rem;
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem 1.5rem;
-  border-bottom: 0.25rem solid transparent;
-  margin-top: 0.75rem;
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.home-search:hover {
-  border-color: var(--red);
-  color: var(--red);
-}
-
-.home-search i {
-  width: 1rem;
-  height: 1rem;
-  position: relative;
-  display: block;
-  border: 0.13rem solid currentColor;
-  border-radius: 50%;
-}
-
-.home-search i::after {
-  content: "";
-  width: 0.45rem;
-  height: 0.13rem;
-  position: absolute;
-  right: -0.35rem;
-  bottom: -0.18rem;
-  background: currentColor;
-  transform: rotate(45deg);
-}
-
 .wrap {
   width: min(100% - 3rem, 76rem);
   margin-inline: auto;
@@ -272,28 +180,6 @@ html {
 }
 
 @media (max-width: 900px) {
-  .home-bar {
-    width: calc(100% - 2rem);
-    min-height: 5rem;
-  }
-
-  .home-bar .menu {
-    margin-left: auto;
-    align-self: center;
-    padding-inline: 1rem;
-    margin-top: 0.5rem;
-  }
-
-  .home-bar .menu-list {
-    top: 2.25rem;
-    color: var(--ink);
-  }
-
-  .home-search {
-    margin-left: 0;
-    padding-inline: 1rem;
-  }
-
   .tiles {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -313,10 +199,6 @@ html {
 }
 
 @media (max-width: 600px), (max-aspect-ratio: 4 / 3) {
-  .home-search {
-    padding-inline: 1.1rem;
-  }
-
   .wrap {
     width: min(100% - 2rem, 76rem);
   }

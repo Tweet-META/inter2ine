@@ -11,14 +11,14 @@
 </head>
 
 <body>
-  <header class="site-head home-head">
-    <div class="home-bar">
-      <a class="home-brand" href="index.html" aria-label="返回首页">
+  <header class="site-head">
+    <div class="site-bar">
+      <a class="site-brand" href="index.html" aria-label="返回首页">
         <img src="assets/img/icon.png" alt="Inter2ine 图标">
       </a>
 
       <nav class="links" aria-label="主导航">
-        <a style="color: var(--red);" href="index.html"><b>首页</b></a>
+        <a class="is-on" href="index.html"><b>首页</b></a>
         <a href="School/index.html"><b>校内</b></a>
         <a href="OffCampus/index.html"><b>校外</b></a>
         <a href="Planning/index.html"><b>规划</b></a>
@@ -28,7 +28,7 @@
       <details class="menu">
         <summary aria-label="打开导航">☰</summary>
         <nav class="menu-list" aria-label="移动端导航">
-          <a style="color: var(--red);" href="index.html"><b>首页</b></a>
+          <a class="is-on" href="index.html"><b>首页</b></a>
           <a href="School/index.html"><b>校内</b></a>
           <a href="OffCampus/index.html"><b>校外</b></a>
           <a href="Planning/index.html"><b>规划</b></a>
@@ -36,7 +36,7 @@
         </nav>
       </details>
 
-      <a class="home-search" href="#" aria-label="搜索">
+      <a class="site-search" href="Search/index.html" aria-label="搜索">
         <i aria-hidden="true"></i>
       </a>
     </div>
@@ -56,28 +56,28 @@
 
         <div class="tiles" aria-label="网站板块">
           <a class="tile" href="School/index.html">
-            <img src="assets/img/hero-1.jpg" alt="">
+            <img src="assets/img/school.png" alt="校内">
             <h3>校内</h3>
             <p>课程、社团与校园信息</p>
             <b aria-hidden="true">→</b>
           </a>
 
           <a class="tile" href="OffCampus/index.html">
-            <img src="assets/img/hero-2.jpg" alt="">
+            <img src="assets/img/offcampus.png" alt="校外">
             <h3>校外</h3>
             <p>考试、备考与学习资源</p>
             <b aria-hidden="true">→</b>
           </a>
 
           <a class="tile" href="Planning/index.html">
-            <img src="assets/img/hero-3.jpg" alt="">
+            <img src="assets/img/planning.png" alt="规划">
             <h3>规划</h3>
             <p>方向、申请与准备路径</p>
             <b aria-hidden="true">→</b>
           </a>
 
           <a class="tile" href="Community/index.html">
-            <img src="assets/img/hero-2.jpg" alt="">
+            <img src="assets/img/community.png" alt="交流">
             <h3>交流</h3>
             <p>经验、问答与学生共建</p>
             <b aria-hidden="true">→</b>
@@ -130,12 +130,12 @@
 
           <div class="projects">
             <article class="project">
-              <img class="project-img" src="assets/img/hero-1.jpg" alt="学生项目占位图">
+              <img class="project-img" src="assets/img/lunai.png" alt="LunAI">
               <div class="project-body">
-                <p class="tag">日期</p>
-                <h3>征集项目展示！</h3>
-                <p>项目简介！</p>
-                <a href="#">更多（其实点不了） →</a>
+                <p class="tag"></p>
+                <h3>LunAI</h3>
+                <p>A PPO-based reinforcement learning project for training human-like bullet-hell game agents, using a multi-scale density-speed observation model.</p>
+                <a href="https://github.com/Tweet-META/LunAI" target="_blank">了解更多 →</a>
               </div>
             </article>
           </div>
@@ -153,9 +153,9 @@
         <div>
           <div>
             <p>本站为学生个人独立制作，非官方公益性平台，并非学校官方网站！</p>
-            <p>本站所引用校徽、公众号图文等相关素材，仅作校园科普、参考交流等目的使用。如存在版权侵权，请联系我们，我们会尽快予以处理。</p>
+            <p>本站所引用公众号图文等相关素材，仅作校园科普、参考交流等目的使用。如存在版权侵权，请联系我们，我们会尽快予以处理。</p>
             <p>所有信息仅供参阅，重要事项以学校官方发布为准，使用者应自行承担相关责任。</p>
-            <p>项目已开源于<a href="https://github.com/Tweet-META/bj2zin" target="_blank">GitHub</a>，也欢迎提出Issue！</p>
+            <p>项目已开源于<a href="https://github.com/Tweet-META/bj2zin" target="_blank">GitHub</a>，欢迎提出Issue！</p>
           </div>
         </div>
       </section>
@@ -165,11 +165,7 @@
   <footer class="site-foot">
     <div class="foot-in">
       <a class="foot-brand" href="index.html" aria-label="返回首页">
-        <img src="assets/img/icon.png" alt="图标">
-        <span>
-          <b>Inter2ine</b>
-          <small>——Where 2s intertwine</small>
-        </span>
+        <img src="./assets/img/inter2ine.png" alt="Inter2ine图标">
       </a>
 
       <div class="foot-meta">
