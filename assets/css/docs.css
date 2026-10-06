@@ -5,6 +5,37 @@
   padding-block: clamp(2.5rem, 5vw, 4rem);
 }
 
+.gate {
+  max-width: 26rem;
+  margin-inline: auto;
+}
+
+.gate label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.gate input,
+.gate button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  font: inherit;
+}
+
+.gate button {
+  margin-top: 1rem;
+  border-color: var(--red);
+  background: var(--red);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.gate-error {
+  color: var(--red);
+}
+
 .crumb {
   display: flex;
   flex-wrap: wrap;
@@ -62,6 +93,41 @@
   border-bottom: 1px solid var(--line);
   font-weight: 700;
   text-decoration: none;
+}
+
+.doc table {
+  margin-block: 1.5rem;
+}
+
+.doc thead th {
+  background: var(--soft);
+}
+
+.doc :is(th, td) {
+  overflow-wrap: anywhere;
+}
+
+.doc tbody :is(th, td):first-child {
+  white-space: nowrap;
+}
+
+.doc .parts {
+  width: auto;
+}
+
+.doc caption {
+  margin-bottom: 0.75rem;
+  color: var(--gray);
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.doc-section h4 {
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 
 .fold {

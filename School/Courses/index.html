@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="课程">
+  <meta name="robots" content="noindex, nofollow">
   <title>课程｜校内</title>
   <link rel="stylesheet" href="../../assets/css/base.css">
   <link rel="stylesheet" href="../../assets/css/docs.css">
-  <script src="../../assets/js/docs-nav.js" defer></script>
+  <script src="../../assets/js/courses.js" defer></script>
 </head>
 
 <body>
@@ -50,191 +51,203 @@
       <span>课程</span>
     </nav>
 
-    <header class="doc-head">
-      <h1>课程</h1>
-      <p>在本页中，你可以了解到校内的课程详情，以及教授这些课程的老师们。除了基础的信息以外，这里也有一些学生经验的分享，如怎样准备这门课的quiz、如何与这位老师相处等。</p>
-      <aside class="tip">
-        <p>本页目前缺少大量信息，等待补充中！</p>
-      </aside>
-      <p>本页贡献者：<a href="https://github.com/Tweet-META/">Tweet-META</a>、11</p>
-    </header>
+    <form class="gate">
+      <h1>课程访问</h1>
+      <p>请输入密码，查看老师和课程信息。</p>
+      <label for="course-password">访问密码</label>
+      <input id="course-password" type="password" autocomplete="off" required>
+      <button type="submit">进入</button>
+      <p class="gate-error" role="alert" hidden>密码不正确，请重试。</p>
+      <noscript><p>请启用 JavaScript 后输入密码。</p></noscript>
+    </form>
 
-    <section class="doc-section">
-      <h2>课程简介</h2>
-      <p>正如校内板块中所说，我校的课程分为美方课程和中方课程。详细来说，美方课程包括文学1-4、物理、化学、美国历史、大部分选修课程，中方课程则包括合格考要求的科目、为国际方向做准备的部分课程、和少部分选修课程。</p>
-      <p>由于课程种类较多，后文将按年级分类课程，也方便大家查阅。</p>
-    </section>
+    <template id="course-content">
+      <header class="doc-head">
+        <h1>课程</h1>
+        <p>在本页中，你可以了解到校内的课程详情，以及教授这些课程的老师们。除了基础的信息以外，这里也有一些学生经验的分享，如怎样准备这门课的quiz、如何与这位老师相处等。</p>
+        <aside class="tip">
+          <p>本页目前缺少大量信息，等待补充中！</p>
+        </aside>
+        <p>本页贡献者：<a href="https://github.com/Tweet-META/">Tweet-META</a>、11</p>
+      </header>
 
-    <section class="doc-section">
-      <h2>老师介绍</h2>
+      <section class="doc-section">
+        <h2>课程简介</h2>
+        <p>正如校内板块中所说，我校的课程分为美方课程和中方课程。详细来说，美方课程包括文学1-4、物理、化学、美国历史、大部分选修课程，中方课程则包括合格考要求的科目、为国际方向做准备的部分课程、和少部分选修课程。</p>
+        <p>由于课程种类较多，后文将按年级分类课程，也方便大家查阅。</p>
+      </section>
 
-      <details class="fold">
-        <summary>外教</summary>
-        <div class="entries">
-          <article class="entry">
-            <div class="entry-grid">
-              <div class="entry-media entry-photo">
-                <img src="../../assets/img/Nate.jpg" alt="The Chemist">
+      <section class="doc-section">
+        <h2>老师介绍</h2>
+
+        <details class="fold">
+          <summary>外教</summary>
+          <div class="entries">
+            <article class="entry">
+              <div class="entry-grid">
+                <div class="entry-media entry-photo">
+                  <img src="../../assets/img/Nate.jpg" alt="The Chemist">
+                </div>
+                <div>
+                  <h3>Mr. Nate</h3>
+                  <p>全名Nathaniel Westfall，教授高一化学和高三生物。性格很和蔼，可以随时请教问题。</p>
+                  <p><small>上课可以昏倒的程度，讲课语速有点快导致我经常听的一知半解。期中期末题巨多而且难，需要背他给的study guide而且有一堆计算。平时作业需要按时交（不得不说其实作业也很莫名其妙，填词经常不会写），其他的project和pre什么的给分很善良 ——11</small></p>
+                </div>
               </div>
-              <div>
-                <h3>Mr. Nate</h3>
-                <p>全名Nathaniel Westfall，教授高一化学和高三生物。性格很和蔼，可以随时请教问题。</p>
-                <p><small>上课可以昏倒的程度，讲课语速有点快导致我经常听的一知半解。期中期末题巨多而且难，需要背他给的study guide而且有一堆计算。平时作业需要按时交（不得不说其实作业也很莫名其妙，填词经常不会写），其他的project和pre什么的给分很善良 ——11</small></p>
-              </div>
-            </div>
-          </article>
+            </article>
 
 
-        </div>
-      </details>
+          </div>
+        </details>
 
-      <details class="fold">
-        <summary>中教</summary>
-        <div class="entries">
-          <article class="entry">
-            <div class="entry-grid">
-              <div class="entry-media entry-photo">
-                <img src="../../assets/img/Nikki.jpg" alt="Nikki">
+        <details class="fold">
+          <summary>中教</summary>
+          <div class="entries">
+            <article class="entry">
+              <div class="entry-grid">
+                <div class="entry-media entry-photo">
+                  <img src="../../assets/img/Nikki.jpg" alt="Nikki">
+                </div>
+                <div>
+                  <h3>张丹 / Nikki</h3>
+                  <p>教授高二AP微观经济，待人友善，十分乐于为学生答疑解惑。同学们若有疑问，可以直接前往二楼她的办公室向她请教。</p>
+                </div>
               </div>
-              <div>
-                <h3>张丹 / Nikki</h3>
-                <p>教授高二AP微观经济，待人友善，十分乐于为学生答疑解惑。同学们若有疑问，可以直接前往二楼她的办公室向她请教。</p>
-              </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="entry">
-            <div class="entry-grid">
-              <div class="entry-media entry-photo">
-                <img src="../../assets/img/Sima.jpg" alt="Sima">
+            <article class="entry">
+              <div class="entry-grid">
+                <div class="entry-media entry-photo">
+                  <img src="../../assets/img/Sima.jpg" alt="Sima">
+                </div>
+                <div>
+                  <h3>司马</h3>
+                  <p>教授AP Precalculus, AP Calculus和AP Statistics。</p>
+                </div>
               </div>
-              <div>
-                <h3>司马</h3>
-                <p>教授AP Precalculus, AP Calculus和AP Statistics。</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </details>
-    </section>
+            </article>
+          </div>
+        </details>
+      </section>
 
-    <section class="doc-section">
-      <h2>详细课程</h2>
+      <section class="doc-section">
+        <h2>详细课程</h2>
 
-      <details class="fold">
-        <summary>高一</summary>
-        <div class="entries">
-          <article class="entry">
-            <h3>化学（外）</h3>
+        <details class="fold">
+          <summary>高一</summary>
+          <div class="entries">
+            <article class="entry">
+              <h3>化学（外）</h3>
 
-            <dl class="meta">
-              <div>
-                <dt>授课老师</dt>
-                <dd>Mr. Nate</dd>
-              </div>
-              <div>
-                <dt>课程简介</dt>
-                <dd>Chemistry is the study of matter — everything that has mass and takes up space — and the changes that matter undergoes. It helps us understand what things are made of, how substances interact, and why chemical reactions happen.<br>
-                    <br>
-                    Some major topics include:<br>
-                    Atomic Structure<br>
-                    The Periodic Table<br>
-                    Bonding<br>
-                    Reactions<br>
-                    States of Matter<br>
-                    Acids and Bases<br>
-                    Energy in Chemistry<br>
-                    <br>
-                    Chemistry connects to many parts of everyday life, from cooking and medicine to batteries, plastics, environmental science, and even the processes occurring inside the human body.<br>
-                    It is often called the "central science" because it links physics, biology, geology, medicine, and many other fields.</dd>
-              </div>
-              <div>
-                <dt>作业情况</dt>
-                <dd>作业大多在Workbook上，有填词和简答，有时会发Worksheet，总体来说量不大。</dd>
-              </div>
-              <div>
-                <dt>Quiz / Test</dt>
-                <dd>常规下每周五有一次Clicker Quiz，复习为主，只要参与就是满分。<br>考试非常难，时间很不够用，而且会有比较超纲的题目，但考试前会发Study Guide，全背下来肯定是能A的。</dd>
-              </div>
-              <div>
-                <dt>补充</dt>
-                <dd>Worksheet建议自己做，上课听不懂下课一定要问，还有小心第一次期中考试 ——Tweet-META</dd>
-              </div>
-            </dl>
-          </article>
-        </div>
-      </details>
+              <dl class="meta">
+                <div>
+                  <dt>授课老师</dt>
+                  <dd>Mr. Nate</dd>
+                </div>
+                <div>
+                  <dt>课程简介</dt>
+                  <dd>Chemistry is the study of matter — everything that has mass and takes up space — and the changes that matter undergoes. It helps us understand what things are made of, how substances interact, and why chemical reactions happen.<br>
+                      <br>
+                      Some major topics include:<br>
+                      Atomic Structure<br>
+                      The Periodic Table<br>
+                      Bonding<br>
+                      Reactions<br>
+                      States of Matter<br>
+                      Acids and Bases<br>
+                      Energy in Chemistry<br>
+                      <br>
+                      Chemistry connects to many parts of everyday life, from cooking and medicine to batteries, plastics, environmental science, and even the processes occurring inside the human body.<br>
+                      It is often called the "central science" because it links physics, biology, geology, medicine, and many other fields.</dd>
+                </div>
+                <div>
+                  <dt>作业情况</dt>
+                  <dd>作业大多在Workbook上，有填词和简答，有时会发Worksheet，总体来说量不大。</dd>
+                </div>
+                <div>
+                  <dt>Quiz / Test</dt>
+                  <dd>常规下每周五有一次Clicker Quiz，复习为主，只要参与就是满分。<br>考试非常难，时间很不够用，而且会有比较超纲的题目，但考试前会发Study Guide，全背下来肯定是能A的。</dd>
+                </div>
+                <div>
+                  <dt>补充</dt>
+                  <dd>Worksheet建议自己做，上课听不懂下课一定要问，还有小心第一次期中考试 ——Tweet-META</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </details>
 
-      <details class="fold">
-        <summary>高二</summary>
-        <div class="entries">
-          <article class="entry">
-            <h3>AP Microeconomics</h3>
+        <details class="fold">
+          <summary>高二</summary>
+          <div class="entries">
+            <article class="entry">
+              <h3>AP Microeconomics</h3>
 
-            <dl class="meta">
-              <div>
-                <dt>授课老师</dt>
-                <dd>张丹 / Nikki</dd>
-              </div>
-              <div>
-                <dt>课程简介</dt>
-                <dd>AP微观经济学作为大学先修课程，聚焦消费者、厂商等个体决策者的市场行为。核心内容涵盖供需模型、弹性、市场效率、四种市场结构（完全竞争至垄断）及政府政策影响。课程侧重图形分析与逻辑推理，无需高等数学。学习过程中可培养经济直觉，为商科、公共政策等专业奠定基础，通过考试可兑换大学学分。</dd>
-              </div>
-              <div>
-                <dt>作业情况</dt>
-                <dd>作业量通常不大。课程前期，作业以绘图任务或一道微观经济学大题为主，整体难度偏低。进入AP总复习阶段后，作业主要为完成她发放的大白本练习册里的选择题。</dd>
-              </div>
-              <div>
-                <dt>Quiz / Test</dt>
-                <dd>会提前告知所有小测与考试安排，Quiz一般针对前几节课所学内容出题，题量较少，十余分钟即可完成。整体而言评分较为宽松，不会在GPA上过度严苛，Quiz成绩不理想时有时还会布置额外作业，可以弥补分数。</dd>
-              </div>
-            </dl>
-          </article>
-        </div>
-      </details>
+              <dl class="meta">
+                <div>
+                  <dt>授课老师</dt>
+                  <dd>张丹 / Nikki</dd>
+                </div>
+                <div>
+                  <dt>课程简介</dt>
+                  <dd>AP微观经济学作为大学先修课程，聚焦消费者、厂商等个体决策者的市场行为。核心内容涵盖供需模型、弹性、市场效率、四种市场结构（完全竞争至垄断）及政府政策影响。课程侧重图形分析与逻辑推理，无需高等数学。学习过程中可培养经济直觉，为商科、公共政策等专业奠定基础，通过考试可兑换大学学分。</dd>
+                </div>
+                <div>
+                  <dt>作业情况</dt>
+                  <dd>作业量通常不大。课程前期，作业以绘图任务或一道微观经济学大题为主，整体难度偏低。进入AP总复习阶段后，作业主要为完成她发放的大白本练习册里的选择题。</dd>
+                </div>
+                <div>
+                  <dt>Quiz / Test</dt>
+                  <dd>会提前告知所有小测与考试安排，Quiz一般针对前几节课所学内容出题，题量较少，十余分钟即可完成。整体而言评分较为宽松，不会在GPA上过度严苛，Quiz成绩不理想时有时还会布置额外作业，可以弥补分数。</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </details>
 
-      <details class="fold">
-        <summary>高三</summary>
-        <div class="entries">
-          <article class="entry">
-            <h3>生物（外）</h3>
+        <details class="fold">
+          <summary>高三</summary>
+          <div class="entries">
+            <article class="entry">
+              <h3>生物（外）</h3>
 
-            <dl class="meta">
-              <div>
-                <dt>授课老师</dt>
-                <dd>Mr. Nate</dd>
-              </div>
-              <div>
-                <dt>课程简介</dt>
-                <dd>Biology is the study of life and living organisms. It explores how living things are structured, how they function, how they interact with their environment, and how they change over time through evolution.<br>
-                    <br>
-                    Some major topics include:<br>
-                    <br>
-                    Cells<br>
-                    Genetics<br>
-                    Evolution<br>
-                    Ecology<br>
-                    Classification<br>
-                    Human Body Systems<br>
-                    Photosynthesis and Respiration<br>
-                    <br>
-                    Biology is closely connected to everyday life. It helps us understand health and disease, agriculture, conservation, nutrition, medicine, and the natural world around us.<br>
-                    <br>
-                    Biology is a diverse and rapidly growing science that helps us answer some of humanity's biggest questions: What is life? How did it arise? How are living things connected? And how can we protect the incredible diversity of life on Earth?</dd>
-              </div>
-              <div>
-                <dt>作业情况</dt>
-                <dd>待补充</dd>
-              </div>
-              <div>
-                <dt>Quiz / Test</dt>
-                <dd>待补充</dd>
-              </div>
-            </dl>
-          </article>
-        </div>
-      </details>
-    </section>
+              <dl class="meta">
+                <div>
+                  <dt>授课老师</dt>
+                  <dd>Mr. Nate</dd>
+                </div>
+                <div>
+                  <dt>课程简介</dt>
+                  <dd>Biology is the study of life and living organisms. It explores how living things are structured, how they function, how they interact with their environment, and how they change over time through evolution.<br>
+                      <br>
+                      Some major topics include:<br>
+                      <br>
+                      Cells<br>
+                      Genetics<br>
+                      Evolution<br>
+                      Ecology<br>
+                      Classification<br>
+                      Human Body Systems<br>
+                      Photosynthesis and Respiration<br>
+                      <br>
+                      Biology is closely connected to everyday life. It helps us understand health and disease, agriculture, conservation, nutrition, medicine, and the natural world around us.<br>
+                      <br>
+                      Biology is a diverse and rapidly growing science that helps us answer some of humanity's biggest questions: What is life? How did it arise? How are living things connected? And how can we protect the incredible diversity of life on Earth?</dd>
+                </div>
+                <div>
+                  <dt>作业情况</dt>
+                  <dd>待补充</dd>
+                </div>
+                <div>
+                  <dt>Quiz / Test</dt>
+                  <dd>待补充</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </details>
+      </section>
+    </template>
   </main>
 
   <footer class="site-foot">
@@ -248,7 +261,7 @@
         <span>地址：北京市东城区内务部街15号</span>
         <span>邮编：100010</span>
         <a href="mailto:2441056992@qq.com">反馈意见：2441056992@qq.com</a>
-        <span><a href="#">网站贡献者</a></span>
+        <span><a href="../../contributors/index.html">网站贡献者</a></span>
       </div>
     </div>
   </footer>
